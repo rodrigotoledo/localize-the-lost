@@ -1,0 +1,14 @@
+<div class="card mb-4" id="<%=dom_id(lost)%>">
+  <div class="card-header">
+    Object losted #<%=lost.id%>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%=lost.title%></h5>
+    <div class="card-text">
+      <%=lost.description %>
+      <hr />
+      <strong>Lost at:</strong> <%= lost.lost_at %><br />
+      <strong>Finded?:</strong> <%= h lost.finded %>
+    </div>
+  </div>
+</div>

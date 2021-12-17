@@ -1,24 +1,9 @@
-<%= form_with(model: [user, Lost.new]) do |form| %>
+<%= bootstrap_form_for([user, Lost.new]) do |form| %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.rich_text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :lost_at, style: "display: block" %>
-    <%= form.datetime_field :lost_at %>
-  </div>
-
-  <div>
-    <%= form.label :finded, style: "display: block" %>
-    <%= form.check_box :finded %>
-  </div>
+  <%= form.text_field :title %>
+  <%= form.rich_text_area :description %>
+  <%= form.datetime_field :lost_at %>
+  <%= form.check_box :finded %>
 
   <div>
     <%= form.submit class: 'btn btn-primary' %>

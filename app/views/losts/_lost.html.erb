@@ -8,7 +8,9 @@
       <p><%=lost.description %></p>
       <hr />
       <strong>Lost at:</strong> <%= time_tag lost.lost_at, "data-local": "time-ago" %><br />
-      <strong>Finded:</strong> <%= h lost.finded %>
+      <strong>Finded:</strong> <%= lost.finded ? 'Yes =)' : 'No =`(' %>
+      <br />
+      <%=link_to 'Toggle find', toggle_find_user_lost_path(lost.user, lost), class: 'btn btn-info' %>
     </div>
   </div>
 </div>

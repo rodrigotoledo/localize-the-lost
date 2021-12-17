@@ -6,7 +6,7 @@ class LostsController < ApplicationController
 
     respond_to do |format|
       if @user.losts.create! lost_params
-        format.html { redirect_to @user, notice: "What you lose was successfully created." }
+        format.html { redirect_to @user, notice: "What you lost was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -2,11 +2,14 @@
 
 <%= render @user %>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-  
-  <%= button_to "Destroy this user", @user, method: :delete %>
+<div class="d-flex justify-content-between">
+  <div class="btn-group mt-4" role="group" aria-label="Actions">
+    <%= link_to "Edit this user", edit_user_path(@user), class: 'btn btn-primary' %>
+    <%= link_to "Back to users", users_path,  class: 'btn btn-secondary' %>
+  </div>
+  <div class="d-flex mt-4 justify-content-end">
+  <%= button_to "Destroy this user", @user, method: :delete,  class: 'btn btn-danger' %>
+  </div>
 </div>
 
 <hr />

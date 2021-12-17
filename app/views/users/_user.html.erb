@@ -1,17 +1,14 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
 
-  <p>
-    <strong>Email:</strong>
-    <%= user.email %>
-  </p>
-
-  <p>
-    <strong>Cell phone:</strong>
-    <%= user.cell_phone %>
-  </p>
-
+<div class="card" id="<%= dom_id user %>">
+  <div class="card-header">
+    User <em>#<%=user.id%></em>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%=user.name%></h5>
+    <div class="card-text">
+      Name: <%=user.name%><br />
+      Email: <%=user.email%><br />
+      CellPhone: <%=user.cell_phone%>
+    </div>
+  </div>
 </div>
